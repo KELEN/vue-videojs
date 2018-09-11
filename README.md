@@ -1,4 +1,4 @@
-# vue-video
+# vue-videojs
 
 > 基于[videojs](https://github.com/videojs/video.js)的封装，方便使用，无污染
 
@@ -6,6 +6,13 @@
 
 ```javascript
 npm install vue-videojs
+```
+
+### 引入vue-video组件
+
+```javascript
+import VVideo from 'vue-videojs'
+Vue.use(VVideo);
 ```
 
 ### 使用
