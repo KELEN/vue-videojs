@@ -1,5 +1,5 @@
-<style lang="scss" scoped>
-  @import "~video.js/dist/video-js.css";
+<style lang="scss">
+  @import '../../node_modules/video.js/dist/video-js.min.css'
 </style>
 <template>
   <video ref="video" v-bind="$attrs"><source v-for="(s, idx) in sourcesWithType" :key="idx" :src="s.src" :type="s.type">

@@ -1,8 +1,9 @@
 # vue-video
 
-> 基于[videojs](https://github.com/videojs/video.js)的封装，灵活
+> 基于[videojs](https://github.com/videojs/video.js)的封装，方便使用，无污染
 
 ### 安装
+
 ```javascript
 npm install vue-videojs
 ```
@@ -18,29 +19,28 @@ npm install vue-videojs
 </style>
 <template>
   <div id="app">
-		<v-video ref="video" width="600" height="400"
-             poster="//vjs.zencdn.net/v/oceans.png"
-             class="video-js"
-             webkit-playsinline
-             playsinline
-             x-webkit-airplay="allow"
-             x5-video-player-type="h5"
-             x5-video-player-fullscreen="true"
-             x5-video-orientation="portraint"
-             controls :sources="videos" :options="playOpts.options" @ready="videoReady" @ended="videoEnd"></v-video>
+    <v-video ref="video" width="600" height="400"
+         poster="//vjs.zencdn.net/v/oceans.png"
+         class="video-js"
+         webkit-playsinline
+         playsinline
+         x-webkit-airplay="allow"
+         x5-video-player-type="h5"
+         x5-video-player-fullscreen="true"
+         x5-video-orientation="portraint"
+         controls :sources="videos" :options="playOpts.options" @ready="videoReady" @ended="videoEnd"></v-video>
   </div>
 </template>
-
 <script>
 export default {
   name: 'app',
   data () {
-  	return {
-  	  videos: [
-  	    'http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4',
+    return {
+      videos: [
+        'http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4',
       ],
       playOpts: {
-  	    options: {
+        options: {
           controls: true,
           // autoplay: true,
           preload: 'auto',
@@ -66,3 +66,4 @@ export default {
 #### 怎么videojs获取实例对象？
 
 在ready回调里可以通过 ```this.$refs.video.videojsObject;``` 来获取videojs的实例对象
+
