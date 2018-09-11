@@ -9,7 +9,7 @@ npm install vue-videojs
 
 ### 使用
 
-```vue
+```
 <style lang="scss">
   .video-js {
     width: 600px;
