@@ -1,7 +1,7 @@
 {
   "name": "vue-videojs",
   "description": "a component wrap video.js for vue.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "kelen",
   "license": "ISC",
   "private": false,
@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git@github.com:KELEN/vue-videojs"
   },
-  "homepage": "http://element.eleme.io",
+  "homepage": "https://www.kelen.cc",
   "browserslist": [
     "> 1%",
     "last 2 versions",
