@@ -1,5 +1,5 @@
 <style lang="scss">
-  @import '../../node_modules/video.js/dist/video-js.min.css'
+  @import '../assets/css/vjs';
 </style>
 <template>
   <video ref="video" v-bind="$attrs"><source v-for="(s, idx) in sourcesWithType" :key="idx" :src="s.src" :type="s.type">
@@ -36,6 +36,13 @@
           // 格式不支持
           return null;
         }
+      },
+      bindEvent () {
+        if (this.videojsObject) {
+          for (let listener in this.$listeners) {
+            this.videojsObject.on(listener, this.$listeners[listener]);
+          }
+        }
       }
     },
     created() {
@@ -52,13 +59,7 @@
     mounted() {
       let me = this;
       this.videojsObject = videojs(this.$refs.video, this.options, function () {
-        let { ready, ended } = me.$listeners;
-        if (typeof ready == 'function') {
-          ready.call(this)
-        }
-        if (typeof ended == 'function') {
-          this.on('ended', ended);
-        }
+        me.bindEvent();
       });
     },
     updated() {
