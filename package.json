@@ -1,7 +1,7 @@
 {
   "name": "vue-videojs",
   "description": "a component wrap video.js for vue.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "kelen",
   "license": "ISC",
   "private": false,

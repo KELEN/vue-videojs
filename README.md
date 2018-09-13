@@ -4,15 +4,21 @@
 
 ### 安装
 
-```javascript
-npm install vue-videojs
+```
+npm install video.js vue-videojs -S
 ```
 
 ### 引入vue-video组件
 
 ```javascript
 import VVideo from 'vue-videojs'
+// use global
 Vue.use(VVideo);
+
+// or use in component .vue
+components: {
+  VVideo
+}
 ```
 
 ### 使用
